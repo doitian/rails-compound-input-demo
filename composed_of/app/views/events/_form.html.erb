@@ -16,8 +16,9 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :beginning_time %><br />
-    <%= f.datetime_select :beginning_time %>
+    <%= f.label :compound_beginning_time, 'Begining Time' %><br />
+    <%= text_field_tag 'event[compound_beginning_time(1s)]', @event.compound_beginning_time.date, :placeholder => 'yyyy-mm-dd' %>
+    <%= text_field_tag 'event[compound_beginning_time(2s)]', @event.compound_beginning_time.time, :placeholder => 'HH:MM' %>
   </div>
   <div class="actions">
     <%= f.submit %>
