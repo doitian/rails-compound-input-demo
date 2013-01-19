@@ -9,8 +9,8 @@ class CompoundDatetime
 
   # Accepts date and time string. The form just need to submit params
   #
-  #   - compound_begining_time(1s) for date
-  #   - compound_begining_time(2s) for time
+  #   - compound_beginning_time(1s) for date
+  #   - compound_beginning_time(2s) for time
   def initialize(date = nil, time = nil)
     if date.present?
       @datetime = Time.zone.parse([date.presence, time.presence || ''].join(' '))
