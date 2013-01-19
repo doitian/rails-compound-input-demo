@@ -17,7 +17,10 @@
   </div>
   <div class="field">
     <%= f.label :beginning_time %><br />
-    <%= f.datetime_select :beginning_time %>
+    <%= f.fields_for :compound_beginning_time do |fields| %>
+      <%= fields.text_field :date, :placeholder => 'yyyy-mm-dd' %>
+      <%= fields.text_field :time, :placeholder => 'HH:MM' %>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>
